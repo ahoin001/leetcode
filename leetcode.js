@@ -27,7 +27,7 @@
 //? Roman To Int
 // ********************
 
-let s = "III";
+let s = "MCMXCIV";
 var romanToInt = function (s) {
   // largest to smallest: add them up
   // smaller before larger: subtract smaller
@@ -50,7 +50,7 @@ var romanToInt = function (s) {
     (total, currentVal, currentIndex, theArray) => {
       // if there is still another element left AND the current element is less than next element
       if (
-        theArray.length > arrayOfRomanNums[currentIndex + 1] &&
+        theArray.length > currentIndex + 1 &&
         romanDict[theArray[currentIndex]] <
           romanDict[theArray[currentIndex + 1]]
       ) {
