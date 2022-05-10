@@ -1,4 +1,24 @@
 //*************************************************************
+//? Contains Duplicate
+// ************************************************************
+const isDuplicates = (anArray) => {
+  let arrayAsSet = new Set(anArray);
+  console.log(arrayAsSet)
+  console.log("Sets length: ",arrayAsSet.size)
+  console.log("Original array length: ",anArray.length)
+
+  if ((anArray.length === arrayAsSet.size)) {
+    console.log("Array has NO duplicates")
+    return false;
+  }
+
+  console.log("Array has duplicates")
+  return true;
+};
+
+isDuplicates([2,2,4,5,6,7,1])
+
+//*************************************************************
 //? TWO SUM
 // ************************************************************
 
@@ -6,15 +26,15 @@
 //   let prevData = {};
 //   let twoSum = [];
 
-//   for (let i in nums) {
-//     let addend = target - nums[i];
-
+//   nums.forEach((currentElement, index) => {
+//     let addend = target - currentElement;
 //     if (addend in prevData) {
-//       twoSum.push([addend, nums[i]]);
+//       twoSum.push([addend, currentElement]);
+//     } else {
+//       prevData[currentElement] = currentElement;
 //     }
+//   });
 
-//     prevData[nums[i]] = i;
-//   }
 //   return twoSum;
 // };
 
@@ -72,22 +92,22 @@
 //? Merge Sorted Lists
 // ************************************************************
 
-var mergeTwoLists = function (list1, list2) {
-  const response = [...Array.from(list1), ...Array.from(list2)];
-  console.log(response);
-  return response.sort((a, b) => a - b);
-};
+// var mergeTwoLists = function (list1, list2) {
+//   const response = [...Array.from(list1), ...Array.from(list2)];
+//   console.log(response);
+//   return response.sort((a, b) => a - b);
+// };
 
-let nums1 = [1, 2, 4];
-let nums2 = [1, 3, 4];
-mergeTwoLists(nums1, nums2);
+// let nums1 = [1, 2, 4];
+// let nums2 = [1, 3, 4];
+// mergeTwoLists(nums1, nums2);
 
 //*************************************************************
 //? Square Root
 // ************************************************************
 
-var mySqrt = function (x) {
-  console.log(Math.sqrt(x));
-};
+// var mySqrt = function (x) {
+//   console.log(Math.sqrt(x));
+// };
 
-mySqrt(4);
+// mySqrt(4);
